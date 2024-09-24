@@ -1,7 +1,12 @@
 // models/catModel.js
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const dotenv = require('dotenv');
+dotenv.config();
+    
+// Use the environment variables in your code
+const URI = process.env.URI;
 
-const uri = "mongodb+srv://Slappy132:Slappy132@cluster0.msqk9rs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = URI;
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,

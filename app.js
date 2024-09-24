@@ -11,6 +11,10 @@ const port = process.env.PORT || 3000;
 // Create HTTP server
 const server = http.createServer(app);
 
+const url = "0.0.0.0"
+
+app.set('url', url);
+
 // Initialize socket.io
 const io = socketIo(server);
 
